@@ -8,7 +8,6 @@ CREATE TABLE estudiantes
  nombres VARCHAR(50),
  apellidos VARCHAR(50),
  edad INTEGER,
- gestion INTEGER,
  fono INTEGER,
  email VARCHAR(100),
  direccion VARCHAR(100),
@@ -132,3 +131,97 @@ select nombres,apellidos
 from estudiantes
 where id_est = max_id_estudiantes();
 
+-- 20
+CREATE FUNCTION suma_edad_estudianes(sexo varchar(20)) RETURNS int
+BEGIN
+ return
+       (
+         SELECT sum(est.edad)
+         FROM estudiantes AS est
+         where est.sexo = sexo
+       );
+END;
+
+DROP FUNCTION IF EXISTS suma_edad_estudianes;
+
+select suma_edad_estudianes('femenino');
+
+select *
+from estudiantes
+where suma_edad_estudianes('femenino') mod 2=0;
+
+-- 21
+
+CREATE FUNCTION suma_edad_estudianes_fem() RETURNS int
+BEGIN
+ return
+       (
+         SELECT sum(est.edad)
+         FROM estudiantes AS est
+         where est.sexo = 'femenino'
+       );
+END;
+
+select suma_edad_estudianes_fem();
+
+select *
+from estudiantes
+where sexo = 'femenino' and edad = suma_edad_estudianes_fem() % 2=0;
+
+-- 22
+
+CREATE FUNCTION sumEdadBySexo(sexoEst VARCHAR(10)) RETURNS INTEGER
+BEGIN
+   DECLARE sumaEdades INTEGER DEFAULT 0;
+
+   SELECT SUM(est.edad) INTO sumaEdades
+   FROM estudiantes AS est
+   WHERE est.sexo = sexoEst;
+
+   RETURN sumaEdades;
+END;
+
+SELECT est.nombres, est.apellidos
+FROM estudiantes AS est
+WHERE sumEdadBySexo('masculino') %2 = 0;
+
+-- 23
+
+CREATE FUNCTION avgEstudianesByEdad(sexo varchar(10)) RETURNS INTEGER
+BEGIN
+    DECLARE promedioEdades INT DEFAULT 0;
+    SELECT avg(est.edad) into promedioEdades
+    FROM estudiantes AS est
+    WHERE est.sexo = sexo;
+
+    RETURN promedioEdades;
+END;
+
+select avgEstudianesByEdad('masculino');
+
+-- 24
+
+CREATE FUNCTION sumEdadFem(sexo varchar(10)) RETURNS INTEGER
+BEGIN
+   DECLARE sumaEdades INTEGER DEFAULT 0;
+
+   SELECT SUM(est.edad) INTO sumaEdades
+   FROM estudiantes AS est
+   WHERE est.sexo = sexo ;
+
+   RETURN sumaEdades;
+END;
+
+create function getNombre(nombre varchar(100),apellidos varchar(100))
+returns varchar(200)
+begin
+   declare nombreCompleto varchar(200);
+   set nombreCompleto = CONCAT(nombre, ' ', apellidos);
+   return nombreCompleto;
+end;
+
+select getNombre(est.nombres, est.apellidos) as persona
+from estudiantes as est;
+
+select CONCAT(est.nombres, ' ', est.apellidos) as Persona, sumEdadFem('femenino') as Edad
+from estudiantes as est;
