@@ -25,6 +25,10 @@ https://github.com/DereckFM/Base-de-Datos-2/blob/main/HITO1/Diagn%C3%B3stico.doc
 
 ## Laboratorios / Hito 2
 
+https://github.com/DereckFM/Base-de-Datos-2/tree/main/Hito%202/Laboratorios
+
 # Hito 3
 
 ## Laboratorios / Hito 3
+
+https://github.com/DereckFM/Base-de-Datos-2/tree/main/Hito%203
