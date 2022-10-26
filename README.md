@@ -7,7 +7,7 @@
 ## Contenido del repositorio
 
 > * [Base de Datos II](#Base-de-Datos-II)
->   * [About / Synopsis](#about--synopsis)
+>   * [Sinopsis](#Laboratorios--Trabajos--Proyectos)
 >   * [Table of contents](#table-of-contents)
 >   * [Installation](#installation)
 >   * [Usage](#usage)
