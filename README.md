@@ -39,4 +39,4 @@ https://github.com/DereckFM/Base-de-Datos-2/tree/main/Hito%203
 
 ## Evaluación / Hito 2
 
-https://github.com/DereckFM/Base-de-Datos-2/tree/main/Evaluacion
+https://github.com/DereckFM/Base-de-Datos-2/tree/main/Procesual
