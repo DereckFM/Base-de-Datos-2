@@ -6,7 +6,7 @@
 
 ## Contenido del repositorio
 
-> * [Base de Datos II](#title--repository-name)
+> * [Base de Datos II](#Base-de-Datos-II)
 >   * [About / Synopsis](#about--synopsis)
 >   * [Table of contents](#table-of-contents)
 >   * [Installation](#installation)
@@ -23,21 +23,3 @@
 >   * [Contributing / Reporting issues](#contributing--reporting-issues)
 >   * [License](#license)
 >   * [About Nuxeo](#about-nuxeo)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# XD
