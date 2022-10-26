@@ -19,6 +19,7 @@
 # Hito 1
 
 ## Diagnóstico / Hito 1
+https://github.com/DereckFM/Base-de-Datos-2/blob/main/HITO1/Diagn%C3%B3stico.docx
 
 # Hito 2
 
